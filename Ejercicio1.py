@@ -16,15 +16,18 @@ def det_divisores(num1):
 
 
 print("===DETERMINAR NUMERO PRIMITIVOS===")
-try:
-    num=input("Digite el numero entero primitivo a evaluar: ")
-except:
-    "El numero debe ser entero."
+while True:
+    try:
+        num=int(input("Digite el numero entero primitivo a evaluar: "))
+        if num==1:
+            print("El numero no es ni primitivo ni compuesto")
+        elif(es_primo(num)):
+            print("El numero es primitivo.")
+        else:
+            print("El numero es compuesto.")
 
-if(es_primo(num)):
-    print("El numero es primitivo.")
-else:
-    print("El numero es compuesto.")
+        print("Los divisores son: ")
+        print(det_divisores(num))
+    except:
+        print("El numero debe ser entero.\n")
 
-print("Los divisores son: ")
-print(det_divisores(num))
