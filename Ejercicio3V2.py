@@ -4,19 +4,15 @@ import msvcrt
 numPrimos=[]
 factores=[]
 
-def hacerListaPrimos(cant):
-    i=2
-    num=2
-    if cant==1:
+def hacerListaPrimos(n):
+    if n==1:
         print("1 no es primo ni compuesto.")
-    while i<int(math.sqrt(cant)):
-        fact=math.factorial(num-1)
-        if fact%num==(num-1):
-            numPrimos.append(num)
-            i+=1
-        num+=1
+    i=2
+    for i in range (2,int(math.sqrt(n))):
+        if n%i==0:
+            numPrimos.append(i)
     if len(numPrimos)==0:
-        numPrimos.append(num)
+        numPrimos.append(n)
 
 cant=int(input("Digite un numero entero: "))
 hacerListaPrimos(cant)
