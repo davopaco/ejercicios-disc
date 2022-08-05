@@ -16,6 +16,7 @@ def hacerListaPrimos(n):
 
 cant=int(input("Digite un numero entero: "))
 hacerListaPrimos(cant)
+print(numPrimos)
 
 for num in numPrimos:
     while cant%num==0:
