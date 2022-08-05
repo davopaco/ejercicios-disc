@@ -29,6 +29,7 @@ def hacer_tablalinda(tauto4):
 print("===EJERCICIO 51===")
 
 valores=[True, False]
+tautoVer=True
 
 for p in valores:
     for q in valores:
@@ -36,6 +37,8 @@ for p in valores:
             for s in valores:
                 for t in valores:
                     R=(not P() or Q()) and (not Q() or P())
+                    if R is False:
+                        tautoVer=False
                     tauto.append(str(p))
                     tauto.append(str(q))
                     tauto.append(str(r))
@@ -46,7 +49,7 @@ for p in valores:
                     tauto=[]
 
 print(hacer_tablalinda(tauto2))
-if tauto.count(False)>0:
+if tautoVer is False:
     print("\t\nNo es una tautología")
 else:
     print("\t\nEs una tautología")
